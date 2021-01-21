@@ -64,7 +64,7 @@ def create_model(num_features, num_labels, num_hidden, keepneuron=0.85):
     return x, y_, y
 
 
-def train_model(train_x, train_y, num_features, num_labels, num_hidden, model_file, epochs=1000, batchsize=1000, learningrate=0.01):
+def train_model(train_x, train_y, num_features, num_labels, num_hidden, model_file, epochs=1000, batchsize=1000, learningrate=1e-2, epsilon=1e-6):
     start = timeit.default_timer()
 
     x, y_, y = create_model(num_features, num_labels, num_hidden)
@@ -136,7 +136,7 @@ def train_model(train_x, train_y, num_features, num_labels, num_hidden, model_fi
                 #train_writer.add_summary(summary, e)
                 #saver.save(sess, tensor_board_log_dir + '/model.ckpt', e)
 
-                if len(loss_epoch) > 1 and np.abs(loss_epoch[-1] - loss_epoch[-100]) < 0.00000001:
+                if len(loss_epoch) > 1 and np.abs(loss_epoch[-1] - loss_epoch[-100]) < epsilon:
                     print("EARLY STOP TRAINING!")
                     break
 
