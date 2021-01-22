@@ -3,7 +3,8 @@
 This is a TensorFlow implementation of Deep Neural Network in the following paper:  
 Licheng Qu, Wei Li, Wenjing Li, Dongfang Ma, and Yinhai Wang. [Daily long-term traffic flow forecasting based on a deep neural network](https://doi.org/10.1016/j.eswa.2018.12.031). Expert systems with applications, Volume 121, 1 May 2019, Pages 304-312.
 
-The future trend of traffic flow is closely related to historical data and its contextual factors. These additional contextual factors, such as collection time, day of the week, weather, season, etc., usually make the traffic flow exhibit various periodic and random fluctuations, and play a very important role in the prediction of traffic flow.  **This is the first time that only contextual factors have been used to predict traffic.  
+The future trend of traffic flow is closely related to historical data and its contextual factors. These additional contextual factors, such as collection time, day of the week, weather, season, etc., usually make the traffic flow exhibit various periodic and random fluctuations, and play a very important role in the prediction of traffic flow.  
+
 **This is the first time that only contextual factors have been used to predict traffic. Although this sounds mysterious and impossible, it has brought us surprising results.**  
 
 ## Optimization
